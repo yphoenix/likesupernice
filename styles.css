@@ -1,0 +1,135 @@
+/* Copyright 2017 Yorick Phoenix. All rights reserved */
+
+.copyrightMsg::after {content: "Copyright (c) 2017 Yorick Phoenix";}
+
+*
+{
+	font-family: sans-serif;
+}
+
+body
+{
+	background-color: #fefefe;
+}
+
+#header
+{
+	text-align: center;
+}
+
+#Refresh
+{
+	font-size: 2vmin;
+    vertical-align: text-bottom;
+    margin-left: 3vmin;
+    border-radius: 0.5vmin;
+    background-color: white;
+    border: 1px solid #453AE4;
+    color: #453AE4;
+    opacity: 0.8;
+}
+
+#Refresh:hover
+{
+    color: black;
+    border-color: #453AE4;
+    opacity: 1;
+    background-color: #453AE4;
+    color: white;
+}
+
+h1
+{
+	display: inline-block;
+	font-size: 3.7vmin;
+	margin-left: 9vmin;
+}
+
+h1#title > a
+{
+	text-decoration: none;
+	color: #453AE4;
+}
+
+h1#title > a:hover
+{
+	text-decoration: underline;
+}
+
+table
+{
+	margin: 0 auto;
+	font-size: 2vmin;
+	font-weight: bold;
+	box-shadow: #888 6px 6px 56px -12px;
+}
+
+tr
+{
+	height: 12vmin;
+}
+
+td
+{
+	min-width:12vmin;
+	max-width:12vmin;
+	padding: 2vmin;
+	border:	1px solid #bbb;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	word-wrap: break-word;
+	background-color: aliceblue;
+}
+
+td:hover
+{
+	border-color: black;
+	transform: scale(1.05);
+}
+
+.sel
+{
+	color: white;
+	background-color: #453AE4;
+	border-color: #453AE4;
+}
+
+#hibiscus
+{
+	font-size: 6vmin;
+}
+
+iframe
+{
+	width: 82vmin;
+	display: block;
+	margin: 3vmin auto 0 auto;
+	height: 500px;
+}
+
+#Enc
+{
+	position: relative;
+}
+
+#BingoBox
+{
+	width: 100%;
+	position: absolute;
+	margin-top: 17vmin;
+    display: none;
+    z-index: 99;
+}
+
+#Bingo
+{
+    font-size: 8vw;
+    text-align: center;
+    margin: 0 28vw;
+    border: 2vmin solid red;
+    border-radius: 14vmin;
+    padding-left: 2vmin;
+    background-color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,97 @@
+{
+	"description":	"Config File for JS Linting",
+	"license":		"Copyright (c) 2017 Yorick Phoenix",
+	"author": 		"Yorick Phoenix <yorick@issio.net>",
+
+	"browserslist":	[
+					 "last 2 versions",
+					 "not ie <= 9"
+					],
+
+	"eslintConfig":
+	{
+	    "env":
+	    {
+	        "browser": true,
+	        "jquery": true
+		},
+
+	    "plugins": ["compat",
+	    			"jsdoc",
+	    			"es5",
+	    			"json",
+	    			"new-with-error",
+	    			"no-use-extend-native",
+	    			"no-empty-blocks"],
+
+		"extends": ["eslint:recommended",
+					"plugin:es5/no-es2015",
+					"plugin:es5/no-es2016"],
+
+		"rules":
+		{
+		    "compat/compat": 			2,
+
+			"jsdoc/check-param-names":	2,
+			"jsdoc/check-tag-names":	2,
+			"jsdoc/check-types":		2,
+			"jsdoc/require-hyphen-before-param-description": 2,
+			"jsdoc/require-param":		2,
+			"jsdoc/require-param-type":	2,
+			"jsdoc/require-returns-type": 2,
+
+			"no-alert":				   			 "off",
+			"no-console":			   			 "off",
+			"no-empty":				   			 "off",
+			"no-multi-spaces":		   			 "off",
+			"no-mixed-operators":				 "off",
+			"no-mixed-spaces-and-tabs":			["off", false],
+			"no-trailing-spaces":	   			 "off",
+			"no-underscore-dangle":	   			 "off",
+
+			"camelcase":						 "off",
+			"key-spacing":						["off",		{ "beforeColon": false,
+															  "afterColon":  true }],
+			"new-cap":							 "off",
+			"quotes":							["off", "double"],
+			"space-infix-ops": 					 "off",
+
+			"no-labels":			   			 "warn",
+			"no-floating-decimal":	   			 "warn",
+			"no-nested-ternary":	   			 "warn",
+			"func-call-spacing":				 "warn",
+			"no-unneeded-ternary":	   			 "warn",
+			"no-undef":				   			 "warn",
+
+			"comma-dangle":						 "warn",
+			"space-before-function-paren":		["warn", "never"],
+
+			"getter-return":					 "error",
+
+			"no-eval":				   			 "error",
+			"no-implied-eval":		   			 "error",
+			"no-global-assign":					 "error",
+			"no-native-reassign":	   			 "error",
+			"no-use-before-define":	   			["error",	{ "functions": false,
+															  "classes":   true }],
+			"no-unused-expressions":   			["error",	{ "allowShortCircuit": true,
+															  "allowTernary":	   true }],
+			"no-unused-vars":		   			["error",	{ "vars": "local",
+															  "args": "after-used"}],
+			"no-whitespace-before-property":	 "error",
+
+			"curly":							 "error",
+			"eqeqeq":							 "error",
+			"radix":							["error", "always"],
+			"semi":								["error", "always"],
+			"strict":							["error", "function"],
+			"valid-jsdoc":						["error",	{ "requireReturn": false,
+															  "requireParamDescription": false,
+															  "requireReturnDescription": false}],
+
+			"wrap-iife":						["error", "any"],
+
+			"vars-on-top":						 "off"
+	    }
+	}
+}
