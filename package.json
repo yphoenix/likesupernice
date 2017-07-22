@@ -8,6 +8,8 @@
 					 "not ie <= 9"
 					],
 
+	"eslintIgnore": ["jquery-3.2.1.min.js"],
+
 	"eslintConfig":
 	{
 	    "env":
