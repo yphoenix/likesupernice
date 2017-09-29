@@ -70,6 +70,7 @@ $words = [
 'Waymo',
 
 'Alexa',
+'Echo',
 'Google Home',
 'HomePod',
 'Internet of Things',
@@ -77,6 +78,7 @@ $words = [
 
 'AppleWatch',
 'iPhone 8',
+'iPhone X',
 'Magic Leap',
 'Pixel',
 
