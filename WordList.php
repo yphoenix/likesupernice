@@ -17,12 +17,13 @@ $words = [
 'Super Nice',
 'That\'s a thing',
 'Thirsty',
+'BoJo',
 
 'Hibiscus',
 'Bibiscus',
 
 'I\'ll eat my hat',
-'John bets Owen',
+// 'John bets Owen',
 
 'AI',
 'AIM',
@@ -81,6 +82,7 @@ $words = [
 'iPhone X',
 'Magic Leap',
 'Pixel',
+'Surface Pro',
 
 'iTunes',
 'Spotify',
