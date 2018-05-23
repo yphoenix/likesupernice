@@ -79,10 +79,10 @@ $words = [
 'Siri',
 
 'AppleWatch',
-'iPhone 8',
+// 'iPhone 8',
 'iPhone X',
 'Magic Leap',
-'Pixel',
+'Pixel 3',
 'Surface Pro',
 
 'iTunes',
