@@ -66,7 +66,7 @@ $words = [
 'Square',
 'Tesla',
 'Theranos',
-'Twillio',
+'Twilio',
 'Twitter',
 'Uber',
 'Waymo',
