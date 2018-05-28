@@ -17,11 +17,10 @@ body
 	text-align: center;
 }
 
-#Refresh
+button
 {
 	font-size: 2vmin;
     vertical-align: text-bottom;
-    margin-left: 3vmin;
     border-radius: 0.5vmin;
     background-color: white;
     border: 1px solid #453AE4;
@@ -29,13 +28,30 @@ body
     opacity: 0.8;
 }
 
-#Refresh:hover
+button:hover
 {
     color: black;
     border-color: #453AE4;
     opacity: 1;
     background-color: #453AE4;
     color: white;
+}
+
+#Refresh
+{
+    margin-left: 3vmin;
+}
+
+#loadmore
+{
+	visibility: hidden;
+	display: block;
+	margin: 1vw auto 3vw auto;
+}
+
+.visible
+{
+	visibility: visible !important;
 }
 
 h1

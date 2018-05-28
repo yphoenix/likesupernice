@@ -63,11 +63,12 @@ echo '</table>';
 echo '</div>';
 
 echo '<div id="simpleCastList"></div>';
+echo '<button id="loadmore" type="button">Load more</button>';
 
-echo '<iframe id="soundcloud" scrolling="no" frameborder="no" ' .
-		'src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/247987851' .
-				'&amp;color=0066cc&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp">' .
-	 '</iframe>';
+//echo '<iframe id="soundcloud" scrolling="no" frameborder="no" ' .
+//		'src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/247987851' .
+//				'&amp;color=0066cc&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp">' .
+//	 '</iframe>';
 
 ?>
 </body>

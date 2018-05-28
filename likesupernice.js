@@ -8,6 +8,7 @@ $(document).ready(
 	function DocReady()
 	{
 		'use strict';
+		var oldest = 0;
 
 		/**
 		 * Flip / rotate a tile in 20 steps
@@ -189,36 +190,49 @@ $(document).ready(
 				}
 			});
 
-		function BuildRSSFeed(ids)
+		function BuildRSSFeed(data)
 		{
 			var jList = $('#simpleCastList');
 
-			ids.forEach(
-				function _AddIFrame(id)
+			if (data.ids !== null)
+			{
+				data.ids.forEach(
+					function _AddIFrame(id)
+					{
+						var html;
+
+						html = '<iframe frameborder="0" height="200px" scrolling="no" seamless="" '
+							 +		   'src="https://embed.simplecast.com/' + id + '?color=3d3d3d" width="100%">'
+							 + '</iframe>';
+
+						jList.append(html);
+					});
+			}
+
+			oldest = data.oldest;
+
+			$('#loadmore').toggleClass('visible', oldest !== 0 && data.ids !== null);
+		}
+
+		function FetchRSSFeed()
+		{
+			jQuery.ajax(
 				{
-					var html;
-
-					html = '<iframe frameborder="0" height="200px" scrolling="no" seamless="" '
-						 +		   'src="https://embed.simplecast.com/' + id + '?color=3d3d3d" width="100%">'
-						 + '</iframe>';
-
-					jList.append(html);
+					type:		'GET',
+					url:		'rssfeed.php?oldest=' + oldest,
+					dataType:	'json',
+					cache:	 	false,
+					complete:	function(response, status)
+								{
+									if (status === 'success')
+									{
+										BuildRSSFeed(response.responseJSON);
+									}
+								}
 				});
 		}
 
-		jQuery.ajax(
-			{
-				type:		'GET',
-				url:		'rssfeed.php',
-				dataType:	'json',
-				cache:	 	false,
-				complete:	function(response, status)
-							{
-								if (status === 'success')
-								{
-									BuildRSSFeed(response.responseJSON);
-								}
-							}
-			});
+		$('#loadmore').click(FetchRSSFeed);
 
+		FetchRSSFeed();
 	});

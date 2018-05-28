@@ -37,8 +37,6 @@ function curlCall($url, $headers = [], $post = [])
 	else
 	if (is_string($res))
 	{
-//		$res = json_decode($res, TRUE);
-
 		$res = ['xml' => simplexml_load_string($res)];
 	}
 
@@ -63,29 +61,46 @@ function curlCall($url, $headers = [], $post = [])
 
 $res = curlCall($url);
 
+// var_dump($res);
+
 $id=[];
 
-$ep59time = strtotime('21 Feb 2018 20:46:00 +0000');
+$oldest = isset($_GET['oldest']) ? (int) $_GET['oldest'] : 0;
+
+$newOldest = $oldest;
+$count = 0;
 
 foreach ($res['xml']->channel->item as $item)
 {
 	$when = strtotime($item->pubDate);
 
-	if ($when >= $ep59time)
+	if ($oldest === 0 ||
+		$when < $oldest)
 	{
+		$newOldest = $when;
+
 		$url = (string) $item->enclosure['url'];
 
 		$path = parse_url($url, PHP_URL_PATH);
 		$id = pathinfo($path, PATHINFO_FILENAME);
 
 		$ids[] = $id;
-	}
-	else
-	{
-		break;
-	}
 
+		$count++;
+
+		if ($oldest === 0 ||
+			$count === 10)
+		{
+			break;
+		}
+	}
 //	echo '<iframe frameborder="0" height="200px" scrolling="no" seamless="" src="https://embed.simplecast.com/' . $id . '?color=3d3d3d" width="100%"></iframe>';
 }
 
-exit(json_encode($ids));
+if ($newOldest === $oldest)
+{
+	$newOldest = 0;
+}
+
+exit(json_encode(['oldest' => $newOldest,
+				  'ids'	   => $ids]));
