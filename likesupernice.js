@@ -1,8 +1,8 @@
-/* Copyright 2017 Yorick Phoenix. All rights reserved */
+/* Copyright 2017-2018 Yorick Phoenix. All rights reserved */
 
 /* @flow */
 
-var _gYPCS = "Copyright (c) 2017, Yorick Phoenix";
+var _gYPCS = "Copyright (c) 2017-2018, Yorick Phoenix";
 
 $(document).ready(
 	function DocReady()
@@ -188,4 +188,37 @@ $(document).ready(
 					FlashBingo();
 				}
 			});
+
+		function BuildRSSFeed(ids)
+		{
+			var jList = $('#simpleCastList');
+
+			ids.forEach(
+				function _AddIFrame(id)
+				{
+					var html;
+
+					html = '<iframe frameborder="0" height="200px" scrolling="no" seamless="" '
+						 +		   'src="https://embed.simplecast.com/' + id + '?color=3d3d3d" width="100%">'
+						 + '</iframe>';
+
+					jList.append(html);
+				});
+		}
+
+		jQuery.ajax(
+			{
+				type:		'GET',
+				url:		'rssfeed.php',
+				dataType:	'json',
+				cache:	 	false,
+				complete:	function(response, status)
+							{
+								if (status === 'success')
+								{
+									BuildRSSFeed(response.responseJSON);
+								}
+							}
+			});
+
 	});

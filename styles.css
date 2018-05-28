@@ -105,6 +105,10 @@ iframe
 	width: 82vmin;
 	display: block;
 	margin: 3vmin auto 0 auto;
+}
+
+#soundcloud
+{
 	height: 500px;
 }
 
