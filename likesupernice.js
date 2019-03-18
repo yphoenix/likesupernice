@@ -2,7 +2,7 @@
 
 /* @flow */
 
-var _gYPCS = "Copyright (c) 2017-2018, Yorick Phoenix";
+var _gYPCS = "Copyright (c) 2017-2019, Yorick Phoenix";
 
 $(document).ready(
 	function DocReady()
@@ -202,7 +202,7 @@ $(document).ready(
 						var html;
 
 						html = '<iframe frameborder="0" height="200px" scrolling="no" seamless="" '
-							 +		   'src="https://embed.simplecast.com/' + id + '?color=3d3d3d" width="100%">'
+							 +		   'src="https://player.simplecast.com/' + id + '?dark=true&color=3d3d3d" width="100%">'
 							 + '</iframe>';
 
 						jList.append(html);

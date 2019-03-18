@@ -2,10 +2,10 @@
 /**
  * @package Charged Tech Bingo Word Generator
  * @author Yorick Phoenix
- * @copyright Copyright (c) 2018, Yorick Phoenix
+ * @copyright Copyright (c) 2018-2019, Yorick Phoenix
  */
 
-$url = 'https://rss.simplecast.com/podcasts/4539/rss';
+$url = 'https://feeds.simplecast.com/tbwR5Zjg';
 
 function curlCall($url, $headers = [], $post = [])
 {
@@ -82,7 +82,8 @@ foreach ($res['xml']->channel->item as $item)
 		$url = (string) $item->enclosure['url'];
 
 		$path = parse_url($url, PHP_URL_PATH);
-		$id = pathinfo($path, PATHINFO_FILENAME);
+		$bits = explode('/', $path);
+		$id = $bits[count($bits)-2];
 
 		$ids[] = $id;
 
