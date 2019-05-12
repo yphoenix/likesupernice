@@ -56,6 +56,7 @@ $words = [
 'Home',
 'Metal',
 'Fortnite',
+'Privacy',
 
 'AI',
 'AIM',
@@ -75,8 +76,8 @@ $words = [
 'AWS',
 'Digital Ocean',
 
-'Hacker News',
 'TechCrunch',
+'Hacker News',
 
 'Self Driving',
 
@@ -119,9 +120,11 @@ $words = [
 'Surface Book',
 'Switch',
 'iPad Pro',
-'Apple Pencil'
+'Apple Pencil',
+'MBP Keyboard',
+'Pixel',
 
-,'iTunes',
+'iTunes',
 'Spotify',
 //'Tidal',
 
@@ -130,6 +133,6 @@ $words = [
 'Elon Musk',
 'Evan Spiegel',
 'Steve Jobs',
-'Tim Cook',
+'Tim Cook'
 //'Travis Kalanick',
 ];
