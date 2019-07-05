@@ -6,6 +6,7 @@
  */
 
 $url = 'https://feeds.simplecast.com/tbwR5Zjg';
+$url = 'https://anchor.fm/s/c5e3024/podcast/rss';
 
 function curlCall($url, $headers = [], $post = [])
 {
@@ -63,7 +64,8 @@ $res = curlCall($url);
 
 // var_dump($res);
 
-$id=[];
+$id   = [];
+$urls = [];
 
 $oldest = isset($_GET['oldest']) ? (int) $_GET['oldest'] : 0;
 
@@ -85,7 +87,8 @@ foreach ($res['xml']->channel->item as $item)
 		$bits = explode('/', $path);
 		$id = $bits[count($bits)-2];
 
-		$ids[] = $id;
+		// $ids[] = $id;
+		$urls[] = str_replace('episodes', 'embed/episodes', $item->link);
 
 		$count++;
 
@@ -104,4 +107,6 @@ if ($newOldest === $oldest)
 }
 
 exit(json_encode(['oldest' => $newOldest,
-				  'ids'	   => $ids]));
+				  'ids'	   => $ids,
+				  'urls'   => $urls]));
+

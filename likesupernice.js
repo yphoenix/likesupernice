@@ -208,10 +208,25 @@ $(document).ready(
 						jList.append(html);
 					});
 			}
+			else
+			if (data.urls !== null)
+			{
+				data.urls.forEach(
+					function _AddIFrame(url)
+					{
+						var html;
+
+						html = '<iframe frameborder="0" scrolling="no" seamless="" '
+							 +		   'src="' + url + '" width="100%">'
+							 + '</iframe>';
+
+						jList.append(html);
+					});
+			}
 
 			oldest = data.oldest;
 
-			$('#loadmore').toggleClass('visible', oldest !== 0 && data.ids !== null);
+			$('#loadmore').toggleClass('visible', oldest !== 0 && (data.ids !== null || data.urls !== null));
 		}
 
 		function FetchRSSFeed()
