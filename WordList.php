@@ -57,6 +57,7 @@ $words = [
 'Metal',
 'Fortnite',
 'Privacy',
+'(white) boys',
 
 'AI',
 'AIM',
@@ -114,10 +115,10 @@ $words = [
 
 'AppleWatch',
 // 'iPhone 8',
-'iPhone XR',
-//'Magic Leap',
-//'Pixel 3',
-//'Surface Pro',
+'iPhone 11',
+'Magic Leap',
+'Pixel 4',
+'Surface Pro',
 'Surface Book',
 'Switch',
 'iPad Pro',
@@ -127,13 +128,14 @@ $words = [
 
 'iTunes',
 'Spotify',
-//'Tidal',
+'Tidal',
 
 'Jeff Bezoes',
 'Elizabeth Holmes',
 'Elon Musk',
 'Evan Spiegel',
 'Steve Jobs',
-'Tim Cook'
+'Tim Cook',
 //'Travis Kalanick',
+'Zuck'
 ];
