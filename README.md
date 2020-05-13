@@ -1,4 +1,4 @@
 # likesupernice
 Word Bingo for Charged Tech Podcast
 
-Demo at: https://likesupernice.xyz
+Demo at: https://likesupernice.scribblings.com
