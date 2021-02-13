@@ -91,7 +91,9 @@ $words = [
 'FitBit',
 'GameStop',
 'Google',
+'Clubhouse'
 'Instagram',
+'IKEA',
 'Lyft',
 'Slack',
 'Reddit',
